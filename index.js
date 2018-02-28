@@ -1,8 +1,9 @@
+require("dotenv").config();
 var express = require("express");
 var app = express();
 
 var bodyParser = require("body-parser");
-var stripe = require("stripe")("sk_test_xxxxxxxxxxxxxxxxxxxxxxxx");
+var stripe = require("stripe")(process.env.STRIPE_API_KEY);
 var axios = require("axios");
 const cors = require("cors");
 
